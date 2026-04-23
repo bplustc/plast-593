@@ -24,34 +24,34 @@
 	<link rel="stylesheet" href="styles.css">
 </head>
 <body>
-	   <header class="header" role="banner">
-	       <div class="header-flex">
-					   <a href="/" class="logo" aria-label="Inicio Plast593" style="display:flex;align-items:center;justify-content:center;gap:0.5rem;text-decoration:none;">
-						   <img src="images/logo.png" alt="Logo Plast593" class="logo-img" style="height:48px;width:auto;display:block;margin:0 auto;" />
-					   </a>
-					   <button id="menu-movil-btn" class="menu-movil-btn" aria-label="Abrir menú de navegación" aria-controls="nav-principal" aria-expanded="false" style="display:flex;align-items:center;gap:0.4rem;">
-						   <img src="images/logo.png" alt="Logo Plast593" class="logo-movil-btn-img" style="height:38px;width:auto;display:block;" />
-						   <a href="/" aria-label="Inicio Plast593" style="text-decoration:none;outline:none;">
-							   <span class="logo-movil-texto" style="font-weight:700;font-size:1.2rem;color:#1769aa;">Plast593</span>
-						   </a>
-					   </button>
-	       	<nav class="nav" id="nav-principal" role="navigation" aria-label="Menú principal">
-	       		<a href="acerca.html" aria-label="Acerca de Plast593">Nuestra Empresa</a>
-			   <a href="productos.html" aria-label="Ver nuestros productos">Productos</a>
-			   <a href="servicios.html" aria-label="Ver servicios">Servicios</a>
-			   <a href="contacto.html" aria-label="Contacto">Contacto</a>
-	       	</nav>
-		       <div class="carrito-icono" id="carrito-icono" title="Ver carrito" role="button" tabindex="0" aria-label="Ver carrito de compras">
-			       <svg width="32" height="32" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
-				       <rect x="2" y="6" width="20" height="13" rx="3" fill="#fff" stroke="#2196f3" stroke-width="2"/>
-				       <path d="M6 19a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm10 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4z" fill="#2196f3"/>
-				       <path d="M4 6l1.5 9.5a2 2 0 0 0 2 1.5h9a2 2 0 0 0 2-1.5L20 6" stroke="#2196f3" stroke-width="2" fill="none"/>
-			       </svg>
-			       <span class="carrito-contador" id="carrito-contador" aria-live="polite">0</span>
-		       </div>
-			<!-- Menú móvil solo visible en móvil -->
-	       </div>
-       </header>
+	<header class="header" role="banner">
+		<div class="header-flex">
+			<a href="/" class="logo" aria-label="Inicio Plast593" style="display:flex;align-items:center;justify-content:center;gap:0.5rem;text-decoration:none;">
+				<img src="images/logo.png" alt="Logo Plast593" class="logo-img" style="height:48px;width:auto;display:block;margin:0 auto;" />
+			</a>
+			<nav class="nav" id="nav-principal" role="navigation" aria-label="Menú principal">
+				<a href="acerca.html" aria-label="Acerca de Plast593">Nuestra Empresa</a>
+				   <a href="productos.html" aria-label="Ver nuestros productos">Productos</a>
+				   <a href="servicios.html" aria-label="Ver servicios">Servicios</a>
+				   <a href="contacto.html" aria-label="Contacto">Contacto</a>
+			</nav>
+			<div class="carrito-icono" id="carrito-icono" title="Ver carrito" role="button" tabindex="0" aria-label="Ver carrito de compras">
+				<svg width="32" height="32" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
+					<rect x="2" y="6" width="20" height="13" rx="3" fill="#fff" stroke="#2196f3" stroke-width="2"/>
+					<path d="M6 19a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm10 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4z" fill="#2196f3"/>
+					<path d="M4 6l1.5 9.5a2 2 0 0 0 2 1.5h9a2 2 0 0 0 2-1.5L20 6" stroke="#2196f3" stroke-width="2" fill="none"/>
+				</svg>
+				<span class="carrito-contador" id="carrito-contador" aria-live="polite">0</span>
+			</div>
+			<!-- Menú móvil solo visible en móvil --></span>
+			<button id="menu-movil-btn" class="menu-movil-btn" aria-label="Abrir menú de navegación" aria-controls="nav-principal" aria-expanded="false" style="display:flex;align-items:center;gap:0.4rem;">
+				<img src="images/logo.png" alt="Logo Plast593" class="logo-movil-btn-img" style="height:38px;width:auto;display:block;" />
+				<a href="/" aria-label="Inicio Plast593" style="text-decoration:none;outline:none;">
+					<span class="logo-movil-texto" style="font-weight:700;font-size:1.2rem;color:#1769aa;">Plast593</span>
+				</a>
+			</button>
+		</div>
+	</header>
        <main>
 				<!-- Modal Carrito -->
 				<div class="modal-carrito" id="modal-carrito" tabindex="-1" aria-modal="true" role="dialog" style="display:none;">
