@@ -13,13 +13,16 @@
 }
 /* Logo móvil solo visible en móvil, logo escritorio oculto en móvil */
 @media (max-width: 768px) {
-	.logo-movil-solo {
-		display: flex !important;
-	}
-	.logo-texto-escritorio,
-	.logo-img {
-		display: none !important;
-	}
+   .logo-movil-solo {
+	   display: flex !important;
+   }
+   .logo-texto-escritorio,
+   .logo-img {
+	   display: none !important;
+   }
+   .logo-movil-btn-img {
+	   display: inline-block !important;
+   }
 }
 
 @media (min-width: 769px) {
@@ -51,9 +54,12 @@
 	}
 }
 @media (max-width: 900px) {
-	.logo-img {
-		display: none !important;
-	}
+   .logo-img {
+	   display: none !important;
+   }
+   .logo-movil-btn-img {
+	   display: inline-block !important;
+   }
 }
 /* Banner tipo galería de imágenes */
 
