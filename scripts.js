@@ -1,22 +1,4 @@
-// Menú móvil personalizado (cubos apilados animados)
-document.addEventListener('DOMContentLoaded', function() {
-	const btn = document.getElementById('menu-movil-btn');
-	const nav = document.getElementById('nav-principal');
-	if (!btn || !nav) return;
-	btn.addEventListener('click', function() {
-		nav.classList.toggle('nav-abierto');
-		btn.classList.toggle('activo');
-	});
-
-	// Cierra el menú móvil al hacer click en cualquier link del nav
-	const links = nav.querySelectorAll('a');
-	links.forEach(function(link) {
-		link.addEventListener('click', function() {
-			nav.classList.remove('nav-abierto');
-			btn.classList.remove('activo');
-		});
-	});
-});
+// Script de despliegue de menú móvil eliminado para el logo/menu-movil-btn
 // --- Configuración de productos (puede cargarse desde JSON externo en el futuro) ---
 // --- Configuración de productos (puede cargarse desde JSON externo en el futuro) ---
 document.addEventListener('DOMContentLoaded', function() {

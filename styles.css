@@ -1,3 +1,58 @@
+/* Eliminar subrayado de todos los enlaces */
+a, a:visited, a:active, a:focus, a:hover {
+	text-decoration: none !important;
+	outline: none;
+}
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap');
+
+html, body, input, button, select, textarea {
+	font-family: 'Inter', 'Montserrat', 'Segoe UI', Arial, sans-serif !important;
+	font-weight: 400;
+	letter-spacing: 0.01em;
+	color: #222;
+}
+
+.hamburguesa-btn.activo .hamburguesa-bar:nth-child(1) {
+	transform: translateY(7px) rotate(45deg);
+}
+.hamburguesa-btn.activo .hamburguesa-bar:nth-child(2) {
+	opacity: 0;
+}
+.hamburguesa-btn.activo .hamburguesa-bar:nth-child(3) {
+	transform: translateY(-7px) rotate(-45deg);
+}
+/* Botón menú hamburguesa solo visible en móviles */
+.hamburguesa-btn {
+	display: none;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	width: 44px;
+	height: 44px;
+	background: transparent;
+	border: none;
+	padding: 0;
+	margin-right: 0.5rem;
+	cursor: pointer;
+	z-index: 20;
+}
+.hamburguesa-bar {
+	width: 28px;
+	height: 4px;
+	background: #1769aa;
+	margin: 3px 0;
+	border-radius: 2px;
+	transition: all 0.3s;
+}
+@media (max-width: 900px) {
+	.hamburguesa-btn {
+		display: flex !important;
+		position: absolute;
+		left: 0.7rem;
+		top: 50%;
+		transform: translateY(-50%);
+	}
+}
 @media (min-width: 769px) {
 	.logo-movil-btn-img {
 		display: none !important;
@@ -5,12 +60,20 @@
 }
 /* Mejora de scroll para modal-formulario en móviles pequeños */
 @media (max-width: 480px) {
-	.modal-formulario-contenido {
-		max-height: 90vh !important;
-		overflow-y: auto !important;
-		box-sizing: border-box;
+   .menu-movil-btn {
+	   display: flex !important;
+	   position: absolute;
+	   left: 50%;
+	   top: 50%;
+	   transform: translate(-50%, -25%);
+	   margin: 0 !important;
+	   z-index: 10;
+   }
+   .header-flex {
+	   position: relative;
+   }
+
 		/* Asegura que el contenido no se corte y se pueda hacer scroll completo */
-	}
 	.modal-formulario {
 		align-items: flex-start !important;
 		padding-top: 2vh;
@@ -18,17 +81,17 @@
 }
 /* Logo móvil solo visible en móvil, logo escritorio oculto en móvil */
 @media (max-width: 768px) {
-   .logo-movil-solo {
+   .menu-movil-btn {
 	   display: flex !important;
+	   position: absolute;
+	   left: 50%;
+	   top: 50%;
+	   transform: translate(-50%, 0%);
+	   margin: 0 !important;
+	   z-index: 10;
    }
-   .logo-texto-escritorio,
-   .logo-img {
-	   display: none !important;
    }
-   .logo-movil-btn-img {
-	   display: inline-block !important;
-   }
-}
+
 
 @media (min-width: 769px) {
 	.logo-movil-solo {

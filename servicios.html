@@ -20,9 +20,28 @@
 <body>
 	<header class="header" role="banner">
 		<div class="header-flex">
-			<a href="/" class="logo" aria-label="Inicio Plast593" style="display:flex;align-items:center;justify-content:center;gap:0.5rem;text-decoration:none;">
-				<img src="images/logo.png" alt="Logo Plast593" class="logo-img" style="height:48px;width:auto;display:block;margin:0 auto;" />
-			</a>
+			<!-- Botón menú hamburguesa solo móvil -->
+			<button id="hamburguesa-btn" class="hamburguesa-btn" aria-label="Abrir menú hamburguesa" aria-controls="nav-principal" aria-expanded="false">
+				<span class="hamburguesa-bar"></span>
+				<span class="hamburguesa-bar"></span>
+				<span class="hamburguesa-bar"></span>
+			</button>
+			</body>
+			<script>
+			// Menú hamburguesa funcionalidad básica
+			document.addEventListener('DOMContentLoaded', function() {
+				const hamburguesaBtn = document.getElementById('hamburguesa-btn');
+				const nav = document.getElementById('nav-principal');
+				if (!hamburguesaBtn || !nav) return;
+				hamburguesaBtn.addEventListener('click', function() {
+					nav.classList.toggle('nav-abierto');
+					hamburguesaBtn.classList.toggle('activo');
+				});
+			});
+			</script>
+			   <a href="/" class="logo" aria-label="Inicio Plast593" style="display:flex;align-items:center;justify-content:center;gap:0.5rem;text-decoration:none;">
+				   <img src="images/logo.png" alt="Logo Plast593" class="logo-img" style="height:48px;width:auto;display:block;margin:0 auto;cursor:pointer;" />
+			   </a>
 			<nav class="nav" id="nav-principal" role="navigation" aria-label="Menú principal">
 				<a href="acerca.html" aria-label="Acerca de Plast593">Nuestra Empresa</a>
 				   <a href="productos.html" aria-label="Ver nuestros productos">Productos</a>
@@ -38,12 +57,10 @@
 				<span class="carrito-contador" id="carrito-contador" aria-live="polite">0</span>
 			</div>
 			<!-- Menú móvil solo visible en móvil --></span>
-   <button id="menu-movil-btn" class="menu-movil-btn" aria-label="Abrir menú de navegación" aria-controls="nav-principal" aria-expanded="false" style="display:flex;align-items:center;gap:0.4rem;">
-      <img src="images/logo.png" alt="Logo Plast593" class="logo-movil-btn-img" style="height:38px;width:auto;display:block;" />
-	<a href="/" aria-label="Inicio Plast593" style="text-decoration:none;outline:none;">
-		<span class="logo-movil-texto" style="font-weight:700;font-size:1.2rem;color:#1769aa;">Plast593</span>
-	</a>
-   </button>
+   <a href="/" id="menu-movil-btn" class="menu-movil-btn" aria-label="Inicio Plast593" style="display:flex;align-items:center;gap:0.4rem;">
+	   <img src="images/logo.png" alt="Logo Plast593" class="logo-movil-btn-img" style="height:38px;width:auto;display:block;" />
+	   <span class="logo-movil-texto" style="font-weight:700;font-size:1.2rem;color:#1769aa;">Plast593</span>
+   </a>
 		</div>
 	</header>
        <main>
