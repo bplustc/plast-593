@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="Servicios de Plast593: fabricación, venta y distribución de productos plásticos en Ecuador. Atención personalizada y envíos rápidos." />
+	<meta name="keywords" content="servicios, Plast593, fabricación, venta, distribución, plásticos, Ecuador, atención personalizada, envíos" />
+	<meta name="author" content="Plast593">
+	<link rel="canonical" href="https://plast593.com/servicios.html" />
+	<meta property="og:title" content="Servicios Plast593 - Soluciones en Plásticos" />
+	<meta property="og:description" content="Conoce los servicios de Plast593: fabricación, venta y distribución de productos plásticos en Ecuador." />
+	<meta property="og:type" content="website" />
+	<meta property="og:url" content="https://plast593.com/servicios.html" />
+	<meta property="og:image" content="https://plast593.com/images/logo.png" />
+	<meta property="og:locale" content="es_EC" />
+	<meta name="robots" content="index, follow">
+	<title>Servicios - Plast593</title>
+	<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+	   <header class="header" role="banner">
+	       <div class="header-flex">
+					   <!-- Logo móvil independiente fuera del botón -->
+	       	<a href="/" class="logo" aria-label="Inicio Plast593" style="display:flex;align-items:center;justify-content:center;gap:0.5rem;text-decoration:none;">
+	       		<img src="images/logo.png" alt="Logo Plast593" class="logo-img" style="height:48px;width:auto;display:block;margin:0 auto;" />
+			<span class="logo-texto-escritorio" style="font-family:'Montserrat',sans-serif;font-weight:700;font-size:1.5rem;">Plast593</span>
+	       	</a>
+	       	<nav class="nav" id="nav-principal" role="navigation" aria-label="Menú principal">
+	       		<a href="acerca.html" aria-label="Acerca de Plast593">Nuestra Empresa</a>
+			   <a href="productos.html" aria-label="Ver nuestros productos">Productos</a>
+			   <a href="servicios.html" aria-label="Ver servicios">Servicios</a>
+			   <a href="contacto.html" aria-label="Contacto">Contacto</a>
+	       	</nav>
+		       <div class="carrito-icono" id="carrito-icono" title="Ver carrito" role="button" tabindex="0" aria-label="Ver carrito de compras">
+			       <svg width="32" height="32" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
+				       <rect x="2" y="6" width="20" height="13" rx="3" fill="#fff" stroke="#2196f3" stroke-width="2"/>
+				       <path d="M6 19a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm10 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4z" fill="#2196f3"/>
+				       <path d="M4 6l1.5 9.5a2 2 0 0 0 2 1.5h9a2 2 0 0 0 2-1.5L20 6" stroke="#2196f3" stroke-width="2" fill="none"/>
+			       </svg>
+			       <span class="carrito-contador" id="carrito-contador" aria-live="polite">0</span>
+		       </div>
+	       	<button id="menu-movil-btn" class="menu-movil-btn" aria-label="Abrir menú de navegación" aria-controls="nav-principal" aria-expanded="false">
+	       		<span class="icono-cubos" aria-hidden="true" style="display:flex;align-items:center;gap:0.4rem;">
+					   <svg width="38" height="38" viewBox="0 0 38 38" fill="none">
+						   <rect x="3" y="25" width="10" height="10" rx="2.5" fill="#2196f3" class="cubos cubo1"/>
+						   <rect x="14" y="14" width="10" height="10" rx="2.5" fill="#ffb300" class="cubos cubo2"/>
+						   <rect x="25" y="3" width="10" height="10" rx="2.5" fill="#43a047" class="cubos cubo3"/>
+					   </svg>
+					   <a href="/" aria-label="Inicio Plast593" style="text-decoration:none;outline:none;">
+						   <span class="logo-movil-texto" style="font-weight:700;font-size:1.2rem;color:#1769aa;">Plast593</span>
+					   </a>
+	       		</span>
+	       	</button>
+	       </div>
+       </header>
+       <main>
+				<!-- Modal Carrito -->
+				<div class="modal-carrito" id="modal-carrito" tabindex="-1" aria-modal="true" role="dialog" style="display:none;">
+					<div class="modal-carrito-bg" id="modal-carrito-bg"></div>
+					<div class="modal-carrito-contenido" id="modal-carrito-contenido">
+						<button class="cerrar-modal" id="cerrar-modal-carrito" aria-label="Cerrar carrito">&times;</button>
+						<h2>Carrito de Compras</h2>
+						<div id="carrito-lista"></div>
+						<button id="procesar-carrito" style="margin-top:1rem;">Procesar pedido</button>
+					</div>
+				</div>
+				<!-- Modal Formulario de Envío -->
+				<div class="modal-formulario" id="modal-formulario" tabindex="-1" aria-modal="true" role="dialog" style="display:none;">
+					<div class="modal-formulario-bg" id="modal-formulario-bg"></div>
+					<div class="modal-formulario-contenido" id="modal-formulario-contenido">
+						<button class="cerrar-modal" id="cerrar-modal-formulario" aria-label="Cerrar formulario">&times;</button>
+						<h2>Datos de Envío</h2>
+						<form id="form-envio">
+							<input type="text" name="nombre" placeholder="Nombre" required><br>
+							<input type="text" name="apellido" placeholder="Apellido" required><br>
+							<input type="text" name="telefono" placeholder="Teléfono" required><br>
+							<input type="email" name="correo" placeholder="Correo" required><br>
+							<input type="text" name="direccion" placeholder="Dirección" required><br>
+							<select name="pago" required>
+								<option value="">Método de pago</option>
+								<option value="Efectivo">Efectivo</option>
+								<option value="Transferencia">Transferencia</option>
+							</select><br>
+							<button type="submit">Enviar pedido</button>
+						</form>
+					</div>
+				</div>
+	       <section id="servicios" class="servicios">
+			   <h2>Nuestros Servicios</h2>
+			   <div class="servicios-descripcion" style="max-width:700px;margin:0 auto 2.2rem auto;padding:1.5rem 2rem;background:#fff;border-radius:1.2rem;box-shadow:0 2px 12px rgba(33,150,243,0.07);text-align:center;">
+				   <p style="font-size:1.15rem;color:#1769aa;margin-bottom:1.2rem;line-height:1.7;">
+					   Diseño, desarrollo y producción de productos plásticos.<br>
+					   <img src="images/WhatsApp Image 2026-03-16 at 17.51.27.jpeg" alt="Diseño y desarrollo Plast593" style="max-width:100%;height:auto;margin:1.2rem auto 1.5rem auto;display:block;border-radius:1.1rem;box-shadow:0 4px 18px rgba(33,150,243,0.13);">
+					   <br>
+					   Somos un equipo especializado en la fabricación de productos plásticos mediante la utilización de ingeniería de alta tecnología y precisión, dedicados a crear productos innovadores de calidad y dar soluciones funcionales de acuerdo con las necesidades del cliente, desde el proceso inicial hasta la entrega del producto final.<br>
+					   <img src="images/WhatsApp Image 2026-03-16 at 17.51.28.jpeg" alt="Equipo especializado Plast593" style="max-width:100%;height:auto;margin:1.2rem auto 1.5rem auto;display:block;border-radius:1.1rem;box-shadow:0 4px 18px rgba(33,150,243,0.13);">
+					   <br>
+					   <span style="display:inline-block;background:#2196f3;color:#e3f2fd;padding:0.4rem 1.1rem;border-radius:0.5rem;font-weight:600;margin-top:0.7rem;">Para información de los procesos de diseño e ingeniería visítenos en nuestra página: <a href="https://www.metal593.com" target="_blank" style="color:#fff;text-decoration:underline;">www.metal593.com</a></span>
+				   </p>
+			   </div>
+		</section>
+       </main>
+	       <footer class="footer" id="contacto" role="contentinfo">
+	       <div class="footer-redes">
+	       	<a href="mailto:info@plast593.com" title="Correo" class="footer-icon" aria-label="Enviar correo a info@plast593.com">
+	       		<span style="font-family:'Montserrat',sans-serif;font-weight:400;font-size:1rem;letter-spacing:0.02em;">info@plast593.com</span>
+	       	</a>
+	       	<a href="https://wa.me/593962288611" target="_blank" title="WhatsApp" class="footer-icon" aria-label="Contactar por WhatsApp">
+	       		<svg width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="12" fill="#25D366"/><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.472-.148-.67.15-.198.297-.767.967-.94 1.166-.173.198-.347.223-.644.075-.297-.149-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.372-.025-.521-.075-.149-.67-1.612-.916-2.207-.242-.579-.487-.5-.67-.51-.173-.008-.372-.01-.571-.01-.198 0-.52.075-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.075.149.198 2.099 3.205 5.077 4.369.711.306 1.263.489 1.695.625.712.227 1.36.195 1.872.118.571-.085 1.758-.719 2.007-1.413.248-.694.248-1.289.173-1.413-.075-.124-.272-.198-.57-.347z" fill="#fff"/></svg>
+	       		<span style="font-family:'Montserrat',sans-serif;font-weight:400;font-size:1rem;letter-spacing:0.02em;">+593 96 228 8611</span>
+	       	</a>
+	       	<a href="https://instagram.com/plast593_ecuador" target="_blank" title="Instagram" class="footer-icon" aria-label="Instagram Plast593">
+	       		<svg width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect width="24" height="24" rx="6" fill="#E1306C"/><circle cx="12" cy="12" r="5" stroke="#fff" stroke-width="2"/><rect x="16" y="6" width="2" height="2" rx="1" fill="#fff"/></svg>
+	       		<span style="font-family:'Montserrat',sans-serif;font-weight:400;font-size:1rem;letter-spacing:0.02em;">@plast593 (En Construcción)</span>
+	       	</a>
+	       	<a href="https://facebook.com/plast593" target="_blank" title="Facebook" class="footer-icon" aria-label="Facebook Plast593">
+	       		<svg width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="12" fill="#1877F3"/><path d="M15.117 8.667h-1.284c-.158 0-.333.208-.333.367v1.033h1.617l-.208 1.617h-1.409v4.05h-1.617v-4.05h-1.033v-1.617h1.033v-.95c0-1.033.617-1.617 1.617-1.617h1.284v1.117z" fill="#fff"/></svg>
+	       		<span style="font-family:'Montserrat',sans-serif;font-weight:400;font-size:1rem;letter-spacing:0.02em;">/plast593 (En Construcción)</span>
+	       	</a>
+	       </div>
+	       <div>
+	       	<span style="font-family:'Montserrat',sans-serif;font-weight:400;font-size:1rem;letter-spacing:0.02em;">&copy; 2026 Plast593. Todos los derechos reservados. Diseñado por B+ Technology.</span>
+	       	</div>
+	   </footer>
+       <script src="scripts.js"></script>
+</body>
+</html>
