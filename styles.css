@@ -494,7 +494,7 @@
 }
 @media (max-width: 900px) {
 	.menu-movil-btn {
-		display: flex;
+		display: flex !important;
 	}
 }
 .icono-cubos svg {
