@@ -88,6 +88,7 @@ html, body {
     margin: 0 auto;
     padding: 0 2vw;
     min-height: 90px;
+    position: relative;
 }
 .logo-titulo {
     display: flex;
@@ -122,8 +123,9 @@ html, body {
     background: none;
     border: none;
     cursor: pointer;
-    z-index: 1002;
-    margin-left: 1rem;
+    z-index: 2000;
+    margin: 0 auto;
+    position: relative;
 }
 .hamburger span {
     display: block;
@@ -155,6 +157,9 @@ html, body {
     }
 }
 @media (max-width: 700px) {
+    .header-content {
+        overflow: visible;
+    }
     .nav-inicio {
         position: absolute;
         top: 70px;
@@ -170,7 +175,7 @@ html, body {
         pointer-events: none;
         transform: translateY(-20px);
         transition: opacity 0.25s, transform 0.25s;
-        z-index: 1001;
+        z-index: 1500;
     }
     .nav-inicio.nav-open {
         opacity: 1;
@@ -187,6 +192,14 @@ html, body {
     }
     .hamburger {
         display: flex;
+        position: absolute;
+        right: 0.5rem;
+        top: 50%;
+        transform: translateY(-50%);
+        margin: 0;
+        z-index: 3000;
+        background: none;
+        box-shadow: none;
     }
 }
 .header-inicio {
@@ -412,14 +425,14 @@ html, body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    border-top: 5px solid #00b4d8;
+    border-top: 5px solid #b30000;
     transition: box-shadow 0.2s;
 }
 .card-mv:hover {
     box-shadow: 0 4px 18px rgba(0, 119, 204, 0.18), 0 2px 8px rgba(0,180,216,0.12);
 }
 .card-mv h3 {
-    color: #0077cc;
+    color: #b30000;
     margin-bottom: 0.7rem;
     margin-top: 0;
 }
