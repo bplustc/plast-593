@@ -7,38 +7,55 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <header class="header">
-        <img src="images/logo-mtl.png" alt="Logo Metal593" class="logo">
-        <h1>Metal593</h1>
-        <p class="slogan">Diseño, Fabricación y Puesta en Marcha de Proyectos Mecánicos Industriales</p>
-        <nav class="nav">
-            <a href="index.html">Inicio</a>
-            <a href="nuestra-empresa.html">Nuestra Empresa</a>
-            <a href="productos-servicios.html">Productos y Servicios</a>
-            <a href="contacto.html">Contacto</a>
-        </nav>
+    <header class="header header-inicio">
+        <div class="header-content">
+            <div class="logo-titulo">
+                <a href="index.html" class="logo-link" aria-label="Ir al inicio">
+                    <img src="images/logo-mtl.png" alt="Logo Metal593" class="logo logo-rojo">
+                </a>
+                <span class="titulo-blanco header-titulo">METAL593</span>
+            </div>
+            <nav class="nav nav-inicio" id="mainNav">
+                <a href="index.html">Inicio</a>
+                <a href="nuestra-empresa.html">Nuestra Empresa</a>
+                <a href="productos-servicios.html">Productos y Servicios</a>
+                <a href="contacto.html">Contacto</a>
+            </nav>
+            <button class="hamburger" id="hamburgerBtn" aria-label="Abrir menú">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
     </header>
     <main>
-        <section class="contacto">
+        <section class="contacto contacto-redes">
             <h2>Contáctanos</h2>
-            <form class="form-contacto">
-                <label for="nombre">Nombre:</label>
-                <input type="text" id="nombre" name="nombre" required>
-                <label for="email">Correo electrónico:</label>
-                <input type="email" id="email" name="email" required>
-                <label for="mensaje">Mensaje:</label>
-                <textarea id="mensaje" name="mensaje" required></textarea>
-                <button type="submit" class="btn">Enviar</button>
-            </form>
-            <div class="info-contacto">
-                <p><strong>Email:</strong> info@metal593.com</p>
-                <p><strong>WhatsApp:</strong> <a href="https://wa.me/593962288611">593 96 228 8611</a></p>
-                <p><strong>LinkedIn:</strong> <a href="https://linkedin.com/company/metal593">metal593</a></p>
+            <div class="redes-contacto">
+                <a href="mailto:info@metal593.com" class="btn-red contacto-email" target="_blank" rel="noopener">
+                    <img src="images/email-icon.svg" alt="Email" class="icono-red"> info@metal593.com
+                </a>
+                <a href="https://wa.me/593962288611" class="btn-red contacto-whatsapp" target="_blank" rel="noopener">
+                    <img src="images/whatsapp-icon.svg" alt="WhatsApp" class="icono-red"> 593 96 228 8611
+                </a>
+                <a href="https://instagram.com/metal593" class="btn-red contacto-instagram" target="_blank" rel="noopener">
+                    <img src="images/instagram-icon.svg" alt="Instagram" class="icono-red"> @metal593
+                </a>
+                <a href="https://facebook.com/metal593" class="btn-red contacto-facebook" target="_blank" rel="noopener">
+                    <img src="images/facebook-icon.svg" alt="Facebook" class="icono-red"> /metal593
+                </a>
             </div>
         </section>
     </main>
     <footer class="footer">
         © 2026 Metal593. Todos los derechos reservados. Diseñado por B+ Technology.
     </footer>
+    <script>
+    // Menú hamburguesa responsive
+    const hamburgerBtn = document.getElementById('hamburgerBtn');
+    const mainNav = document.getElementById('mainNav');
+    hamburgerBtn.addEventListener('click', function() {
+        mainNav.classList.toggle('nav-open');
+        hamburgerBtn.classList.toggle('is-active');
+    });
+    </script>
 </body>
 </html>

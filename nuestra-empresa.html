@@ -7,16 +7,24 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <header class="header">
-        <img src="images/logo-mtl.png" alt="Logo Metal593" class="logo">
-        <h1>Metal593</h1>
-        <p class="slogan">Diseño, Fabricación y Puesta en Marcha de Proyectos Mecánicos Industriales</p>
-        <nav class="nav">
-            <a href="index.html">Inicio</a>
-            <a href="nuestra-empresa.html">Nuestra Empresa</a>
-            <a href="productos-servicios.html">Productos y Servicios</a>
-            <a href="contacto.html">Contacto</a>
-        </nav>
+    <header class="header header-inicio">
+        <div class="header-content">
+            <div class="logo-titulo">
+                <a href="index.html" class="logo-link" aria-label="Ir al inicio">
+                    <img src="images/logo-mtl.png" alt="Logo Metal593" class="logo logo-rojo">
+                </a>
+                <span class="titulo-blanco header-titulo">METAL593</span>
+            </div>
+            <nav class="nav nav-inicio" id="mainNav">
+                <a href="index.html">Inicio</a>
+                <a href="nuestra-empresa.html">Nuestra Empresa</a>
+                <a href="productos-servicios.html">Productos y Servicios</a>
+                <a href="contacto.html">Contacto</a>
+            </nav>
+            <button class="hamburger" id="hamburgerBtn" aria-label="Abrir menú">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
     </header>
     <main>
         <section class="descripcion">
@@ -39,5 +47,14 @@
     <footer class="footer">
         © 2026 Metal593. Todos los derechos reservados. Diseñado por B+ Technology.
     </footer>
+    <script>
+    // Menú hamburguesa responsive
+    const hamburgerBtn = document.getElementById('hamburgerBtn');
+    const mainNav = document.getElementById('mainNav');
+    hamburgerBtn.addEventListener('click', function() {
+        mainNav.classList.toggle('nav-open');
+        hamburgerBtn.classList.toggle('is-active');
+    });
+    </script>
 </body>
 </html>
