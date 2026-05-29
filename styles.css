@@ -349,33 +349,40 @@ html, body {
         min-height: 40vh;
     }
     .fila-mosaico img {
-        height: 90px;
-        min-height: 70px;
-        max-height: 120px;
+        height: 70px;
+        min-height: 55px;
+        max-height: 90px;
+        width: 100%;
+        max-width: 120px;
+        border-radius: 8px !important;
+        flex: 1 1 0;
+        box-sizing: border-box;
+        object-fit: cover;
+        overflow: hidden;
     }
-    .galeria-titulo h2 {
-        font-size: 1.7rem;
     }
-    .galeria-titulo {
-        padding: 0.7rem 1.5rem;
-    }
-}
+
 @media (max-width: 600px) {
     .galeria-mosaico {
-        max-width: 80vw;
-        min-height: 20vh;
+        max-width: 85vw;
+        min-height: 30vh;
+        padding: 0.5rem 0rem;
     }
     .fila-mosaico img {
-        height: 40px;
-        min-height: 30px;
-        max-height: 60px;
+        height: 70px;
+        min-height: 55px;
+        max-height: 90px;
+        width: 33vw;
+        max-width: 120px;
+        border-radius: 6px;
     }
     .galeria-titulo {
-        padding: 0.4rem 0.7rem;
+        padding: 0.7rem 1.2rem;
         border-radius: 10px;
     }
     .galeria-titulo h2 {
-        font-size: 1.1rem;
+        font-size: 1.05rem;
+        letter-spacing: 1.5px;
     }
 }
 .descripcion-inicio {
