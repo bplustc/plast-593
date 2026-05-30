@@ -501,8 +501,8 @@ html, body {
         padding: 0.7rem 0.2rem;
     }
     .servicio-imgs img, .servicio-imgs video {
-        width: 90px;
-        height: 60px;
+        width: 100px;
+        height: 80px;
     }
     .servicio p {
         font-size: 0.97rem;
